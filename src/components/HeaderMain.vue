@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
-    <AddTaskBtn />
+    <AddTaskBtn text="Add Task" color="green" />
   </header>
 </template>
 <script>
@@ -19,5 +19,8 @@ export default {
 <style>
 header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 </style>

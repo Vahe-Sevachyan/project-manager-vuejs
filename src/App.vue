@@ -1,15 +1,51 @@
 <template>
   <div class="container">
     <HeaderMain title="Project Manager" />
+    <SetTasks />
   </div>
 </template>
 
 <script>
 import HeaderMain from "./components/HeaderMain";
+import SetTasks from "./components/SetTasks";
 export default {
   name: "App",
   components: {
     HeaderMain,
+    SetTasks,
+  },
+  data() {
+    return {
+      tasks: [],
+    };
+  },
+  created() {
+    this.task = [
+      {
+        id: 1,
+        text: "Get better at vue",
+        day: "March 1st at 2:30pm",
+        reminder: true,
+      },
+      {
+        id: 2,
+        text: "Practice VueJS",
+        day: "February 13th at 12:30pm",
+        reminder: true,
+      },
+      {
+        id: 3,
+        text: "Master VueJS",
+        day: "April 2nd at 5:30pm",
+        reminder: true,
+      },
+      {
+        id: 5,
+        text: "Finish the VueJs Course",
+        day: "December 13st at 5:30pm",
+        reminder: true,
+      },
+    ];
   },
 };
 </script>
